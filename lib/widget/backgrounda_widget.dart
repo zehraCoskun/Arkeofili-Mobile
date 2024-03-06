@@ -3,8 +3,8 @@ import 'package:arkeofili_mobile/screen/drawer/main_drawer.dart';
 import 'package:flutter/material.dart';
 
 class BackgroundWidget extends StatelessWidget {
-  const BackgroundWidget({super.key});
-
+  const BackgroundWidget({super.key, required this.body});
+  final Widget body;
   @override
   Widget build(BuildContext context) {
     return Scaffold(
@@ -16,6 +16,7 @@ class BackgroundWidget extends StatelessWidget {
         ),
       ),
       drawer: const MainDrawer(),
+      body: body,
     );
   }
 }

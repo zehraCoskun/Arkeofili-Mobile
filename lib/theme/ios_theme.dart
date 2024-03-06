@@ -45,26 +45,31 @@ final iosTheme = ThemeData(
   ),
   //Icon Ayarları
   iconTheme: IconThemeData(color: ArkeofiliColors.darkGreen),
-//!
+
   //TextTheme Ayarları
   textTheme: TextTheme(
+//en büyük
     displayLarge: TextStyle(fontSize: 96, fontWeight: FontWeight.w300, color: ArkeofiliColors.white),
     displayMedium: TextStyle(fontSize: 60, fontWeight: FontWeight.w400, color: ArkeofiliColors.darkBlack),
     displaySmall: TextStyle(fontSize: 48, fontWeight: FontWeight.w400, color: ArkeofiliColors.darkBlack),
-    headlineMedium: TextStyle(fontSize: 34, fontWeight: FontWeight.w400, color: ArkeofiliColors.darkBlack),
+//büyük başlıklar için
+    headlineLarge: TextStyle(fontSize: 34, fontWeight: FontWeight.w400, color: ArkeofiliColors.darkBlack),
+    headlineMedium: TextStyle(fontSize: 24, fontWeight: FontWeight.w400, color: ArkeofiliColors.white), // ok
     headlineSmall: TextStyle(fontSize: 24, fontWeight: FontWeight.w400, color: ArkeofiliColors.darkBlack),
-    titleLarge: TextStyle(
-      //başlıklar
-      fontSize: 20,
-      fontWeight: FontWeight.w500,
-      color: ArkeofiliColors.white,
-    ),
+//genel metin kullanımı
+    titleLarge: TextStyle(fontSize: 20, fontWeight: FontWeight.w500, color: ArkeofiliColors.white),
+    titleMedium: TextStyle(fontSize: 20, fontWeight: FontWeight.w500, color: ArkeofiliColors.white),
+    titleSmall: TextStyle(fontSize: 20, fontWeight: FontWeight.w500, color: ArkeofiliColors.white),
+//uzun içerikler için
     bodyLarge: TextStyle(fontSize: 20, fontWeight: FontWeight.w500, color: ArkeofiliColors.darkBlack),
-    bodyMedium: TextStyle(fontSize: 14, fontWeight: FontWeight.w400, color: ArkeofiliColors.lightBlack),
+    bodyMedium: TextStyle(fontSize: 14, fontWeight: FontWeight.w400, color: ArkeofiliColors.white), // ok
     bodySmall: TextStyle(fontSize: 12, fontWeight: FontWeight.w400, color: ArkeofiliColors.lightBlack),
+//en küçük yazılar için
     labelLarge: TextStyle(fontSize: 14, fontWeight: FontWeight.w500, color: ArkeofiliColors.lightBlack),
+    labelMedium: TextStyle(fontSize: 14, fontWeight: FontWeight.w500, color: ArkeofiliColors.darkGreen),
+    labelSmall: TextStyle(fontSize: 14, fontWeight: FontWeight.w500, color: ArkeofiliColors.grey),
   ),
-
+//!
   //BottomAppBar Theme Ayarları
   bottomAppBarTheme: BottomAppBarTheme(
     color: ArkeofiliColors.grey,

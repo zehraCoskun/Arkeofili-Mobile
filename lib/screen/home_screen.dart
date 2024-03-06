@@ -1,4 +1,7 @@
 import 'package:arkeofili_mobile/widget/backgrounda_widget.dart';
+import 'package:arkeofili_mobile/widget/headline_post_widget.dart';
+import 'package:arkeofili_mobile/widget/post_card_widget.dart';
+import 'package:arkeofili_mobile/widget/top_posts_row_widget.dart';
 import 'package:flutter/material.dart';
 
 class HomeScreen extends StatelessWidget {
@@ -7,63 +10,27 @@ class HomeScreen extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     final double height = MediaQuery.of(context).size.height;
+    final double width = MediaQuery.of(context).size.width;
     return BackgroundWidget(
       body: Padding(
-        padding: const EdgeInsets.symmetric(horizontal: 8),
+        padding: const EdgeInsets.only(right: 8, left: 8, top: 12),
         child: SingleChildScrollView(
             child: Column(
-          children: [
-            HeadlinePostWidget(height: height),
-            Column(
-              children: [
-                Image.asset(
-                  "assets/images/antakya1.jpg",
-                  height: height * 2 / 5,
-                ),
-              ],
-            )
+          crossAxisAlignment: CrossAxisAlignment.start,
+          children: <Widget>[
+            HeadlinePostWidget(height: height, width: width),
+            TopPostsRowWidget(height: height, width: width),
+            PostCardWidget(width: width),
+            PostCardWidget(width: width),
+            PostCardWidget(width: width),
+            PostCardWidget(width: width),
+            PostCardWidget(width: width),
+            PostCardWidget(width: width),
+            PostCardWidget(width: width),
+            PostCardWidget(width: width),
           ],
         )),
       ),
-    );
-  }
-}
-
-class HeadlinePostWidget extends StatelessWidget {
-  const HeadlinePostWidget({
-    super.key,
-    required this.height,
-  });
-
-  final double height;
-
-  @override
-  Widget build(BuildContext context) {
-    return Column(
-      children: [
-        Image.asset(
-          "assets/images/antakya1.jpg",
-          height: height * 2 / 5,
-        ),
-        Text(
-          "Antakya’da Bulunan Iphigenia Mozaiği",
-          style: Theme.of(context).textTheme.headlineMedium,
-        ),
-        Text(
-          "Antakya’da Bulunan Iphigenia Mozaiği Antakya’da Bulunan Iphigenia Mozaiği ",
-          style: Theme.of(context).textTheme.bodyMedium,
-        ),
-        Row(
-          mainAxisAlignment: MainAxisAlignment.start,
-          children: [
-            Text("Arkeoloji", style: Theme.of(context).textTheme.labelMedium),
-            Padding(
-              padding: const EdgeInsets.symmetric(horizontal: 8.0),
-              child: Text("· 2s önce", style: Theme.of(context).textTheme.labelSmall),
-            )
-          ],
-        )
-      ],
     );
   }
 }

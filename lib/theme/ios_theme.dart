@@ -54,21 +54,23 @@ final iosTheme = ThemeData(
     displaySmall: TextStyle(fontSize: 48, fontWeight: FontWeight.w400, color: ArkeofiliColors.darkBlack),
 //büyük başlıklar için
     headlineLarge: TextStyle(fontSize: 34, fontWeight: FontWeight.w400, color: ArkeofiliColors.darkBlack),
-    headlineMedium: TextStyle(fontSize: 24, fontWeight: FontWeight.w400, color: ArkeofiliColors.white), // ok
+    headlineMedium: TextStyle(fontSize: 24, fontWeight: FontWeight.w600, height: 1.2, color: ArkeofiliColors.white), // ok
     headlineSmall: TextStyle(fontSize: 24, fontWeight: FontWeight.w400, color: ArkeofiliColors.darkBlack),
 //genel metin kullanımı
-    titleLarge: TextStyle(fontSize: 20, fontWeight: FontWeight.w500, color: ArkeofiliColors.white),
-    titleMedium: TextStyle(fontSize: 20, fontWeight: FontWeight.w500, color: ArkeofiliColors.white),
-    titleSmall: TextStyle(fontSize: 20, fontWeight: FontWeight.w500, color: ArkeofiliColors.white),
+    titleLarge: TextStyle(fontSize: 20, fontWeight: FontWeight.w800, color: ArkeofiliColors.white),
+    titleMedium: TextStyle(fontSize: 16, fontWeight: FontWeight.w400, color: ArkeofiliColors.white), //ok
+    titleSmall: TextStyle(fontSize: 16, fontWeight: FontWeight.w400, color: ArkeofiliColors.white), //ok
 //uzun içerikler için
     bodyLarge: TextStyle(fontSize: 20, fontWeight: FontWeight.w500, color: ArkeofiliColors.darkBlack),
     bodyMedium: TextStyle(fontSize: 14, fontWeight: FontWeight.w400, color: ArkeofiliColors.white), // ok
     bodySmall: TextStyle(fontSize: 12, fontWeight: FontWeight.w400, color: ArkeofiliColors.lightBlack),
 //en küçük yazılar için
     labelLarge: TextStyle(fontSize: 14, fontWeight: FontWeight.w500, color: ArkeofiliColors.lightBlack),
-    labelMedium: TextStyle(fontSize: 14, fontWeight: FontWeight.w500, color: ArkeofiliColors.darkGreen),
+    labelMedium: TextStyle(fontSize: 14, fontWeight: FontWeight.w500, color: ArkeofiliColors.mainColor),
     labelSmall: TextStyle(fontSize: 14, fontWeight: FontWeight.w500, color: ArkeofiliColors.grey),
   ),
+
+  dividerTheme: DividerThemeData(color: ArkeofiliColors.grey),
 //!
   //BottomAppBar Theme Ayarları
   bottomAppBarTheme: BottomAppBarTheme(

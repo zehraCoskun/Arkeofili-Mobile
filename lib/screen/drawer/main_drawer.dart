@@ -1,4 +1,4 @@
-import 'package:arkeofili_mobile/model/category_items.dart';
+import 'package:arkeofili_mobile/model/enum/category_enum.dart';
 import 'package:arkeofili_mobile/screen/drawer/drawer_body.dart';
 import 'package:arkeofili_mobile/screen/drawer/drawer_footer.dart';
 import 'package:arkeofili_mobile/screen/drawer/drawer_title.dart';

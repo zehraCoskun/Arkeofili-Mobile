@@ -6,7 +6,7 @@ void main() {
   runApp(MaterialApp(
     theme: ThemeSettings.lightTheme(),
     themeMode: ThemeMode.system,
-    initialRoute: "/home",
+    initialRoute: "/main",
     onGenerateRoute: (settings) => RouterGenerator.routePath(settings),
   ));
 }

@@ -1,4 +1,4 @@
-import 'package:arkeofili_mobile/model/category_items.dart';
+import 'package:arkeofili_mobile/model/enum/category_enum.dart';
 import 'package:flutter/material.dart';
 
 class DrawerBody extends StatelessWidget {

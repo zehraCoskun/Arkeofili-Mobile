@@ -12,6 +12,7 @@ class HomeScreen extends StatelessWidget {
     final double height = MediaQuery.of(context).size.height;
     final double width = MediaQuery.of(context).size.width;
     return BackgroundWidget(
+      isAppBar: false,
       body: Padding(
         padding: const EdgeInsets.only(right: 8, left: 8, top: 12),
         child: SingleChildScrollView(

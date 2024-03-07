@@ -71,13 +71,16 @@ final iosTheme = ThemeData(
   ),
 
   dividerTheme: DividerThemeData(color: ArkeofiliColors.grey),
-//!
-  //BottomAppBar Theme Ayarları
+
+//BottomAppBar Theme Ayarları
   bottomAppBarTheme: BottomAppBarTheme(
-    color: ArkeofiliColors.grey,
+    color: ArkeofiliColors.darkBlack,
     surfaceTintColor: ArkeofiliColors.mainColor,
   ),
+  unselectedWidgetColor: ArkeofiliColors.lightBlack,
   cardColor: ArkeofiliColors.grey,
+  
+//!
 
   //InputDecoration Ayarlari
   inputDecorationTheme: InputDecorationTheme(

@@ -10,6 +10,7 @@ class PostModel {
 
   final Categories category;
   final List<String>? tags;
+  final bool isTop;
 
   PostModel({
     required this.title,
@@ -20,5 +21,6 @@ class PostModel {
     required this.duration,
     required this.category,
     this.tags,
+    required this.isTop,
   });
 }

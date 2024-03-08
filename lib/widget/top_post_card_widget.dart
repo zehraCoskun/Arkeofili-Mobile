@@ -1,3 +1,5 @@
+import 'package:arkeofili_mobile/model/enum/category_enum.dart';
+import 'package:arkeofili_mobile/model/post_model.dart';
 import 'package:flutter/material.dart';
 
 class TopPostCardWidget extends StatelessWidget {
@@ -5,10 +7,12 @@ class TopPostCardWidget extends StatelessWidget {
     super.key,
     required this.height,
     required this.width,
+    required this.postModel,
   });
 
   final double height;
   final double width;
+  final PostModel postModel;
 
   @override
   Widget build(BuildContext context) {
@@ -17,7 +21,7 @@ class TopPostCardWidget extends StatelessWidget {
       mainAxisAlignment: MainAxisAlignment.start,
       children: [
         Image.asset(
-          "assets/images/antakya1.jpg",
+          postModel.thumbnail,
           width: height * 1 / 5,
           fit: BoxFit.fill,
         ),
@@ -26,7 +30,7 @@ class TopPostCardWidget extends StatelessWidget {
           child: SizedBox(
             width: width * 9 / 20,
             child: Text(
-              "Kilis’te Bulunan Aidesim Mozaikli Bazilikası",
+              postModel.title,
               style: Theme.of(context).textTheme.titleMedium,
               overflow: TextOverflow.fade,
               maxLines: 3,
@@ -36,10 +40,10 @@ class TopPostCardWidget extends StatelessWidget {
         Row(
           mainAxisAlignment: MainAxisAlignment.start,
           children: [
-            Text("Arkeoloji", style: Theme.of(context).textTheme.labelMedium),
+            Text(getCategoryString(postModel.category), style: Theme.of(context).textTheme.labelMedium),
             Padding(
               padding: const EdgeInsets.symmetric(horizontal: 8.0),
-              child: Text("· 2s önce", style: Theme.of(context).textTheme.labelSmall),
+              child: Text("· ${postModel.duration}", style: Theme.of(context).textTheme.labelSmall),
             )
           ],
         )

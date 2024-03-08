@@ -1,3 +1,5 @@
+import 'package:arkeofili_mobile/model/enum/category_enum.dart';
+import 'package:arkeofili_mobile/model/post_model.dart';
 import 'package:flutter/material.dart';
 
 class HeadlinePostWidget extends StatelessWidget {
@@ -5,10 +7,12 @@ class HeadlinePostWidget extends StatelessWidget {
     super.key,
     required this.height,
     required this.width,
+    required this.postModel,
   });
 
   final double height;
   final double width;
+  final PostModel postModel;
 
   @override
   Widget build(BuildContext context) {
@@ -16,7 +20,7 @@ class HeadlinePostWidget extends StatelessWidget {
       mainAxisAlignment: MainAxisAlignment.start,
       children: [
         Image.asset(
-          "assets/images/antakya1.jpg",
+          postModel.thumbnail,
           height: height * 1.2 / 5,
           width: width,
           fit: BoxFit.fill,
@@ -24,24 +28,26 @@ class HeadlinePostWidget extends StatelessWidget {
         Padding(
           padding: const EdgeInsets.symmetric(vertical: 8.0),
           child: Text(
-            "Antakya’da Bulunan Iphigenia Mozaiği Iphigenia Mozaiği Iphigenia Mozaiği",
+            postModel.title,
             style: Theme.of(context).textTheme.headlineMedium,
           ),
         ),
         Padding(
           padding: const EdgeInsets.symmetric(vertical: 8.0),
           child: Text(
-            "Antakya’da Bulunan Iphigenia Mozaiği Antakya’da Bulunan Iphigenia Mozaiği xasdcsdvsdv",
+            postModel.content,
             style: Theme.of(context).textTheme.bodyMedium,
+            maxLines: 3,
+            overflow: TextOverflow.ellipsis,
           ),
         ),
         Row(
           mainAxisAlignment: MainAxisAlignment.start,
           children: [
-            Text("Arkeoloji", style: Theme.of(context).textTheme.labelMedium),
+            Text(getCategoryString(postModel.category), style: Theme.of(context).textTheme.labelMedium),
             Padding(
               padding: const EdgeInsets.symmetric(horizontal: 8.0),
-              child: Text("· 2s önce", style: Theme.of(context).textTheme.labelSmall),
+              child: Text("· ${postModel.duration}", style: Theme.of(context).textTheme.labelSmall),
             )
           ],
         )

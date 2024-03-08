@@ -30,12 +30,10 @@ class _MainScreenState extends State<MainScreen> {
       body: screens[selectedScreen],
       bottomNavigationBar: BottomNavigationBar(
         type: BottomNavigationBarType.fixed,
-        backgroundColor: Theme.of(context).bottomAppBarTheme.color, 
         selectedItemColor: Theme.of(context).bottomAppBarTheme.surfaceTintColor,
         showSelectedLabels: true,
         showUnselectedLabels: false,
         currentIndex: selectedScreen,
-        unselectedItemColor: Theme.of(context).unselectedWidgetColor,
         onTap: setScreen,
         items: const <BottomNavigationBarItem>[
           BottomNavigationBarItem(icon: Icon(Icons.home_outlined), label: "Anasayfa"),

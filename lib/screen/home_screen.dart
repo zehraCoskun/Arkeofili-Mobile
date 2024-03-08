@@ -1,7 +1,9 @@
+import 'package:arkeofili_mobile/data/dummy_data.dart';
+import 'package:arkeofili_mobile/model/post_model.dart';
 import 'package:arkeofili_mobile/widget/backgrounda_widget.dart';
 import 'package:arkeofili_mobile/widget/headline_post_widget.dart';
 import 'package:arkeofili_mobile/widget/post_card_widget.dart';
-import 'package:arkeofili_mobile/widget/top_posts_row_widget.dart';
+import 'package:arkeofili_mobile/widget/top_post_list_widget.dart';
 import 'package:flutter/material.dart';
 
 class HomeScreen extends StatelessWidget {
@@ -11,6 +13,8 @@ class HomeScreen extends StatelessWidget {
   Widget build(BuildContext context) {
     final double height = MediaQuery.of(context).size.height;
     final double width = MediaQuery.of(context).size.width;
+    final List<PostModel> topPostList = dummyData.where((element) => element.isTop).toList();
+
     return BackgroundWidget(
       isAppBar: false,
       body: Padding(
@@ -19,8 +23,16 @@ class HomeScreen extends StatelessWidget {
             child: Column(
           crossAxisAlignment: CrossAxisAlignment.start,
           children: <Widget>[
-            HeadlinePostWidget(height: height, width: width),
-            TopPostsRowWidget(height: height, width: width),
+            HeadlinePostWidget(
+              height: height,
+              width: width,
+              postModel: topPostList[1],
+            ),
+            TopPostListWidget(
+              height: height,
+              width: width,
+              postList: topPostList,
+            ),
             PostCardWidget(width: width),
             PostCardWidget(width: width),
             PostCardWidget(width: width),

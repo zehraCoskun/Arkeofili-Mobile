@@ -10,14 +10,14 @@ class BackgroundWidget extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
-      appBar: isAppBar ?
-       AppBar(
-        backgroundColor: Theme.of(context).appBarTheme.backgroundColor,
-        title: Image.asset(
-          logoTitle,
-          height: kToolbarHeight * 9 / 10,
-        ),
-      ) : null,
+      appBar: isAppBar
+          ? AppBar(
+              title: Image.asset(
+                logoTitle,
+                height: kToolbarHeight * 9 / 10,
+              ),
+            )
+          : null,
       drawer: const MainDrawer(),
       body: body,
       bottomNavigationBar: bottomNavigationBar,

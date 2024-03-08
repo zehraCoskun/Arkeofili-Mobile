@@ -10,8 +10,6 @@ class RouterGenerator {
         return RouteTransition.fadeTransitionBuilder(child: const MainScreen());
       case "/home":
         return RouteTransition.fadeTransitionBuilder(child: const HomeScreen());
-      case "/answers":
-        return RouteTransition.fadeTransitionBuilder(child: const HomeScreen()); //!
       //case "/anthropology":
       //   return RouteTransition.fadeTransitionBuilder(child: const AnthropologyScreen());
       // case "/archaeology":

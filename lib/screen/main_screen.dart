@@ -1,3 +1,4 @@
+import 'package:arkeofili_mobile/data/dummy_data.dart';
 import 'package:arkeofili_mobile/screen/categories_screen.dart';
 import 'package:arkeofili_mobile/screen/home_screen.dart';
 import 'package:arkeofili_mobile/widget/backgrounda_widget.dart';
@@ -18,9 +19,9 @@ class _MainScreenState extends State<MainScreen> {
     });
   }
 
-  final List<Widget> screens = const [
-    HomeScreen(),
-    CategoriesScreen(),
+  final List<Widget> screens = [
+    const HomeScreen(),
+    CategoriesScreen(postModel: dummyData[0],),
   ];
 
   @override

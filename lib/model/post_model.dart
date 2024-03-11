@@ -7,6 +7,7 @@ class PostModel {
   final String date;
   final String content;
   final String duration;
+  final DateTime releaseDate;
 
   final Categories category;
   final List<String>? tags;
@@ -22,5 +23,6 @@ class PostModel {
     required this.category,
     this.tags,
     required this.isTop,
+    required this.releaseDate,
   });
 }

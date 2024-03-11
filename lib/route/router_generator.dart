@@ -1,4 +1,6 @@
+import 'package:arkeofili_mobile/model/post_model.dart';
 import 'package:arkeofili_mobile/route/route_transition.dart';
+import 'package:arkeofili_mobile/screen/categories_screen.dart';
 import 'package:arkeofili_mobile/screen/main_screen.dart';
 import 'package:arkeofili_mobile/screen/home_screen.dart';
 import 'package:flutter/material.dart';
@@ -10,6 +12,12 @@ class RouterGenerator {
         return RouteTransition.fadeTransitionBuilder(child: const MainScreen());
       case "/home":
         return RouteTransition.fadeTransitionBuilder(child: const HomeScreen());
+      case "/category":
+        final PostModel post = settings.arguments as PostModel;
+        return RouteTransition.fadeTransitionBuilder(
+            child: CategoriesScreen(
+          postModel: post,
+        ));
       //case "/anthropology":
       //   return RouteTransition.fadeTransitionBuilder(child: const AnthropologyScreen());
       // case "/archaeology":
@@ -19,11 +27,11 @@ class RouterGenerator {
       // case "/evolution":
       //   return RouteTransition.fadeTransitionBuilder(child: const EvolutionScreen());
       // case "/list":
-      //   return RouteTransition.fadeTransitionBuilder(child: const HomeScreen()); //!
+      //   return RouteTransition.fadeTransitionBuilder(child: const HomeScreen());
       // case "/palaeontology":
       //   return RouteTransition.fadeTransitionBuilder(child: const PalaeontologyScreen());
       // case "/specialFile":
-      //   return RouteTransition.fadeTransitionBuilder(child: const HomeScreen()); //!
+      //   return RouteTransition.fadeTransitionBuilder(child: const HomeScreen());
       // case "/detail":
       //   final PostModel post = settings.arguments as PostModel;
       //   return RouteTransition.fadeTransitionBuilder(child: GlobalDetailScreen(post: post));

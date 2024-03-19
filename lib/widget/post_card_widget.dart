@@ -1,12 +1,16 @@
+import 'package:arkeofili_mobile/model/enum/category_enum.dart';
+import 'package:arkeofili_mobile/model/post_model.dart';
 import 'package:flutter/material.dart';
 
 class PostCardWidget extends StatelessWidget {
   const PostCardWidget({
     super.key,
     required this.width,
+    required this.postModel,
   });
 
   final double width;
+  final PostModel postModel;
 
   @override
   Widget build(BuildContext context) {
@@ -18,7 +22,7 @@ class PostCardWidget extends StatelessWidget {
             crossAxisAlignment: CrossAxisAlignment.start,
             children: [
               Image.asset(
-                "assets/images/antakya1.jpg",
+                postModel.thumbnail,
                 width: width * 2 / 6,
                 fit: BoxFit.fill,
               ),
@@ -31,7 +35,7 @@ class PostCardWidget extends StatelessWidget {
                     SizedBox(
                         width: width * 3.4 / 6,
                         child: Text(
-                          "Antakya’da Bulunan xxssssa Iphigenia Mozaiği Antakya’da Bulunan xxssssa Iphigenia Mozaiği Antakya’da Bulunan xxssssa Iphigenia Mozaiği",
+                          postModel.title,
                           style: Theme.of(context).textTheme.titleSmall,
                           maxLines: 3,
                           overflow: TextOverflow.clip,
@@ -40,10 +44,11 @@ class PostCardWidget extends StatelessWidget {
                       padding: const EdgeInsets.symmetric(horizontal: 4.0, vertical: 8),
                       child: Row(
                         children: [
-                          Text("Arkeoloji", style: Theme.of(context).textTheme.labelMedium),
+                          Text(getCategoryString(postModel.category), style: Theme.of(context).textTheme.labelMedium),
                           Padding(
                             padding: const EdgeInsets.symmetric(horizontal: 8.0),
-                            child: Text("· 2s önce", style: Theme.of(context).textTheme.labelSmall),
+                            child:
+                                Text("· ${postModel.duration}", style: Theme.of(context).textTheme.labelSmall), //buraya tarih gelse daha iyi olabilir
                           )
                         ],
                       ),

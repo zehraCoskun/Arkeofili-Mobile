@@ -1,6 +1,7 @@
 import 'package:arkeofili_mobile/data/dummy_data.dart';
 import 'package:arkeofili_mobile/screen/categories_screen.dart';
 import 'package:arkeofili_mobile/screen/home_screen.dart';
+import 'package:arkeofili_mobile/screen/popular_screen.dart';
 import 'package:arkeofili_mobile/widget/backgrounda_widget.dart';
 import 'package:flutter/material.dart';
 
@@ -19,10 +20,7 @@ class _MainScreenState extends State<MainScreen> {
     });
   }
 
-  final List<Widget> screens = [
-    const HomeScreen(),
-    CategoriesScreen(postModel: dummyData[0],),
-  ];
+  final List<Widget> screens = [const HomeScreen(), CategoriesScreen(postModel: dummyData[0]), PopularScreen(postModel: dummyData[1])];
 
   @override
   Widget build(BuildContext context) {
@@ -39,6 +37,7 @@ class _MainScreenState extends State<MainScreen> {
         items: const <BottomNavigationBarItem>[
           BottomNavigationBarItem(icon: Icon(Icons.home_outlined), label: "Anasayfa"),
           BottomNavigationBarItem(icon: Icon(Icons.list), label: "Kategoriler"),
+          BottomNavigationBarItem(icon: Icon(Icons.newspaper_outlined), label: "Taze Haberler"),
         ],
       ),
     );

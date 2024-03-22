@@ -1,3 +1,4 @@
+import 'package:arkeofili_mobile/constant/screens_const.dart';
 import 'package:arkeofili_mobile/data/dummy_data.dart';
 import 'package:arkeofili_mobile/model/post_model.dart';
 import 'package:arkeofili_mobile/widget/post_card_widget.dart';
@@ -15,13 +16,14 @@ class PopularScreen extends StatelessWidget {
         Padding(
           padding: const EdgeInsets.all(8.0),
           child: Text(
-            "Taze Haberler",
+            mainScreenTab3,
             style: Theme.of(context).textTheme.titleLarge,
           ),
         ),
         PostCardWidget(
           width: width,
           postModel: dummyData[0],
+          isDate: true,
         ),
       ],
     );

@@ -1,3 +1,4 @@
+import 'package:arkeofili_mobile/constant/screens_const.dart';
 import 'package:arkeofili_mobile/data/dummy_data.dart';
 import 'package:arkeofili_mobile/screen/categories_screen.dart';
 import 'package:arkeofili_mobile/screen/home_screen.dart';
@@ -35,9 +36,9 @@ class _MainScreenState extends State<MainScreen> {
         currentIndex: selectedScreen,
         onTap: setScreen,
         items: const <BottomNavigationBarItem>[
-          BottomNavigationBarItem(icon: Icon(Icons.home_outlined), label: "Anasayfa"),
-          BottomNavigationBarItem(icon: Icon(Icons.list), label: "Kategoriler"),
-          BottomNavigationBarItem(icon: Icon(Icons.newspaper_outlined), label: "Taze Haberler"),
+          BottomNavigationBarItem(icon: Icon(Icons.home_outlined), label: mainScreenTab1),
+          BottomNavigationBarItem(icon: Icon(Icons.list), label: mainScreenTab2),
+          BottomNavigationBarItem(icon: Icon(Icons.newspaper_outlined), label: mainScreenTab3),
         ],
       ),
     );

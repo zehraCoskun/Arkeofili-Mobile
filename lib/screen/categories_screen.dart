@@ -18,6 +18,7 @@ class CategoriesScreen extends StatelessWidget {
         PostCardWidget(
           width: width,
           postModel: dummyData[0],
+          isDate: true,
         ),
       ],
     );

@@ -7,10 +7,12 @@ class PostCardWidget extends StatelessWidget {
     super.key,
     required this.width,
     required this.postModel,
+    required this.isDate,
   });
 
   final double width;
   final PostModel postModel;
+  final bool isDate;
 
   @override
   Widget build(BuildContext context) {
@@ -46,10 +48,11 @@ class PostCardWidget extends StatelessWidget {
                         children: [
                           Text(getCategoryString(postModel.category), style: Theme.of(context).textTheme.labelMedium),
                           Padding(
-                            padding: const EdgeInsets.symmetric(horizontal: 8.0),
-                            child:
-                                Text("· ${postModel.duration}", style: Theme.of(context).textTheme.labelSmall), //buraya tarih gelse daha iyi olabilir
-                          )
+                              padding: const EdgeInsets.symmetric(horizontal: 8.0),
+                              child: InfoWidget(
+                                isDate: isDate,
+                                postModel: postModel,
+                              ))
                         ],
                       ),
                     )
@@ -62,5 +65,26 @@ class PostCardWidget extends StatelessWidget {
         ],
       ),
     );
+  }
+}
+
+class InfoWidget extends StatelessWidget {
+  const InfoWidget({super.key, required this.isDate, required this.postModel});
+  final bool isDate;
+  final PostModel postModel;
+  @override
+  Widget build(BuildContext context) {
+    if (isDate) {
+      return Text(
+        "· ${postModel.date.toString()}",
+        style: Theme.of(context).textTheme.labelSmall,
+      );
+    } else {
+      return Text(
+        "· ${postModel.duration}",
+        style: Theme.of(context).textTheme.labelSmall,
+      );
+      ;
+    }
   }
 }

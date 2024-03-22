@@ -36,18 +36,22 @@ class HomeScreen extends StatelessWidget {
             PostCardWidget(
               width: width,
               postModel: dummyData[0],
+              isDate: false,
             ),
             PostCardWidget(
               width: width,
               postModel: dummyData[1],
+              isDate: false,
             ),
             PostCardWidget(
               width: width,
               postModel: dummyData[2],
+              isDate: false,
             ),
             PostCardWidget(
               width: width,
               postModel: dummyData[3],
+              isDate: false,
             ),
           ],
         )),

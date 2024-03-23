@@ -21,7 +21,11 @@ class _MainScreenState extends State<MainScreen> {
     });
   }
 
-  final List<Widget> screens = [const HomeScreen(), CategoriesScreen(postModel: dummyData[0]), PopularScreen(postModel: dummyData[1])];
+  final List<Widget> screens = [
+    const HomeScreen(),
+    CategoriesScreen(postModel: dummyData[0]),
+    PopularScreen(postModel: dummyData[1]),
+  ];
 
   @override
   Widget build(BuildContext context) {

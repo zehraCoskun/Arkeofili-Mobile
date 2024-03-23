@@ -15,47 +15,44 @@ class HomeScreen extends StatelessWidget {
     final double width = MediaQuery.of(context).size.width;
     final List<PostModel> topPostList = dummyData.where((element) => element.isTop).toList();
 
-    return BackgroundWidget(
-      isAppBar: false,
-      body: Padding(
-        padding: const EdgeInsets.only(right: 8, left: 8, top: 12),
-        child: SingleChildScrollView(
-            child: Column(
-          crossAxisAlignment: CrossAxisAlignment.start,
-          children: <Widget>[
-            HeadlinePostWidget(
-              height: height,
-              width: width,
-              postModel: topPostList[1],
-            ),
-            TopPostListWidget(
-              height: height,
-              width: width,
-              postList: topPostList,
-            ),
-            PostCardWidget(
-              width: width,
-              postModel: dummyData[0],
-              isDate: false,
-            ),
-            PostCardWidget(
-              width: width,
-              postModel: dummyData[1],
-              isDate: false,
-            ),
-            PostCardWidget(
-              width: width,
-              postModel: dummyData[2],
-              isDate: false,
-            ),
-            PostCardWidget(
-              width: width,
-              postModel: dummyData[3],
-              isDate: false,
-            ),
-          ],
-        )),
-      ),
+    return Padding(
+      padding: const EdgeInsets.only(right: 8, left: 8, top: 12),
+      child: SingleChildScrollView(
+          child: Column(
+        crossAxisAlignment: CrossAxisAlignment.start,
+        children: <Widget>[
+          HeadlinePostWidget(
+            height: height,
+            width: width,
+            postModel: topPostList[1],
+          ),
+          TopPostListWidget(
+            height: height,
+            width: width,
+            postList: topPostList,
+          ),
+          PostCardWidget(
+            width: width,
+            postModel: dummyData[0],
+            isDate: false,
+          ),
+          PostCardWidget(
+            width: width,
+            postModel: dummyData[1],
+            isDate: false,
+          ),
+          PostCardWidget(
+            width: width,
+            postModel: dummyData[2],
+            isDate: false,
+          ),
+          PostCardWidget(
+            width: width,
+            postModel: dummyData[3],
+            isDate: false,
+          ),
+        ],
+      )),
     );
   }
 }

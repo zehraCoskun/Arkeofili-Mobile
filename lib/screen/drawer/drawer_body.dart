@@ -20,7 +20,7 @@ class DrawerBody extends StatelessWidget {
           return ListTile(
             onTap: () {
               Navigator.of(context).pop();
-              Navigator.of(context).pushNamed(getCategoryRouteName(drawerItems[index]));
+              Navigator.of(context).pushNamed(getCategoryRouteName(drawerItems[index]), arguments: drawerItems[index]);
             },
             title: Text(getCategoryString(drawerItems[index]), style: Theme.of(context).textTheme.bodyLarge),
           );

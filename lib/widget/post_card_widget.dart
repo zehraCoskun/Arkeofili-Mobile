@@ -84,7 +84,6 @@ class InfoWidget extends StatelessWidget {
         "· ${postModel.duration}",
         style: Theme.of(context).textTheme.labelSmall,
       );
-      ;
     }
   }
 }

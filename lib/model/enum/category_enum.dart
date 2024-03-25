@@ -1,5 +1,3 @@
-
-
 import 'package:arkeofili_mobile/data/dummy_data.dart';
 import 'package:arkeofili_mobile/model/post_model.dart';
 
@@ -39,12 +37,12 @@ String getCategoryRouteName(Categories category) {
   return "/${category.toString().split('.').last}";
 }
 
-Map<Categories, List<PostModel>> categoryLists = {};
 
+Map<Categories, List<PostModel>> categorizedPosts = {};
 void initializeCategories() {
   for (var post in dummyData) {
-    var category = post.category;
-    categoryLists[category] ??= [];
-    categoryLists[category]!.add(post);
+    categorizedPosts.putIfAbsent(post.category, () => []);
+    categorizedPosts[post.category]!.add(post);
   }
 }
+/* putIfAbsent yöntemi, belirli bir anahtarın (post.category), değeri (List<PostModel>) henüz haritada yoksa, belirtilen bir değeri ([] - boş bir liste) bu anahtarla ilişkilendirir. Eğer belirtilen anahtar zaten haritada varsa, hiçbir şey yapmaz. */

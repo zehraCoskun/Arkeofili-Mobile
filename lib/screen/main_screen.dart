@@ -23,7 +23,7 @@ class _MainScreenState extends State<MainScreen> {
 
   final List<Widget> screens = [
     const HomeScreen(),
-    CategoriesScreen(postModel: dummyData[0]),
+    CategoriesScreen(),
     PopularScreen(postModel: dummyData[1]),
   ];
 

@@ -18,7 +18,7 @@ class RouterGenerator {
         final PostModel post = settings.arguments as PostModel;
         return RouteTransition.fadeTransitionBuilder(
             child: CategoriesScreen(
-          postModel: post,
+         // postModel: post,
         ));
       case "/anthropology":
         final Categories categories = settings.arguments as Categories;

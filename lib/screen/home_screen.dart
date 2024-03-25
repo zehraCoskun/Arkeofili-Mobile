@@ -1,6 +1,6 @@
+import 'dart:math';
 import 'package:arkeofili_mobile/data/dummy_data.dart';
 import 'package:arkeofili_mobile/model/post_model.dart';
-import 'package:arkeofili_mobile/widget/backgrounda_widget.dart';
 import 'package:arkeofili_mobile/widget/headline_post_widget.dart';
 import 'package:arkeofili_mobile/widget/post_card_widget.dart';
 import 'package:arkeofili_mobile/widget/top_post_list_widget.dart';
@@ -14,45 +14,37 @@ class HomeScreen extends StatelessWidget {
     final double height = MediaQuery.of(context).size.height;
     final double width = MediaQuery.of(context).size.width;
     final List<PostModel> topPostList = dummyData.where((element) => element.isTop).toList();
+    var random = Random();
+    final headlinePostIndex = random.nextInt(topPostList.length);
+    final selectedHeadlinePost = topPostList.removeAt(headlinePostIndex);
 
     return Padding(
       padding: const EdgeInsets.only(right: 8, left: 8, top: 12),
       child: SingleChildScrollView(
-          child: Column(
-        crossAxisAlignment: CrossAxisAlignment.start,
-        children: <Widget>[
-          HeadlinePostWidget(
-            height: height,
-            width: width,
-            postModel: topPostList[1],
-          ),
-          TopPostListWidget(
-            height: height,
-            width: width,
-            postList: topPostList,
-          ),
-          PostCardWidget(
-            width: width,
-            postModel: dummyData[0],
-            isDate: false,
-          ),
-          PostCardWidget(
-            width: width,
-            postModel: dummyData[1],
-            isDate: false,
-          ),
-          PostCardWidget(
-            width: width,
-            postModel: dummyData[2],
-            isDate: false,
-          ),
-          PostCardWidget(
-            width: width,
-            postModel: dummyData[3],
-            isDate: false,
-          ),
-        ],
-      )),
+        child: Column(
+          crossAxisAlignment: CrossAxisAlignment.start,
+          children: <Widget>[
+            HeadlinePostWidget(
+              height: height,
+              width: width,
+              postModel: selectedHeadlinePost,
+            ),
+            TopPostListWidget(
+              height: height,
+              width: width,
+              postList: topPostList,
+            ),
+            ListView.builder(
+              physics: const NeverScrollableScrollPhysics(),
+              shrinkWrap: true,
+              itemCount: dummyData.length,
+              itemBuilder: (context, index) {
+                return PostCardWidget(width: width, postModel: dummyData[index], isDate: false);
+              },
+            ),
+          ],
+        ),
+      ),
     );
   }
 }

@@ -1,5 +1,4 @@
 import 'package:arkeofili_mobile/model/enum/category_enum.dart';
-import 'package:arkeofili_mobile/model/post_model.dart';
 import 'package:arkeofili_mobile/route/route_transition.dart';
 import 'package:arkeofili_mobile/screen/categories_screen.dart';
 import 'package:arkeofili_mobile/screen/topic_screen.dart';
@@ -15,10 +14,8 @@ class RouterGenerator {
       case "/home":
         return RouteTransition.fadeTransitionBuilder(child: const HomeScreen());
       case "/categories":
-        final PostModel post = settings.arguments as PostModel;
         return RouteTransition.fadeTransitionBuilder(
-            child: CategoriesScreen(
-         // postModel: post,
+            child: const CategoriesScreen(
         ));
       case "/anthropology":
         final Categories categories = settings.arguments as Categories;

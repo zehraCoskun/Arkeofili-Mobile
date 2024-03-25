@@ -18,7 +18,7 @@ class DrawerTitle extends StatelessWidget {
         child: InkWell(
           onTap: () {
             Navigator.of(context).pop();
-            Navigator.of(context).pushNamed("/home");
+            Navigator.of(context).pushNamed("/main");
           },
           child: Row(
             mainAxisAlignment: MainAxisAlignment.center,

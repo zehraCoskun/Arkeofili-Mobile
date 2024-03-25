@@ -76,7 +76,7 @@ class InfoWidget extends StatelessWidget {
   Widget build(BuildContext context) {
     if (isDate) {
       return Text(
-        "· ${postModel.date.toString()}",
+        "· ${_formatDate(postModel.releaseDate)}",
         style: Theme.of(context).textTheme.labelSmall,
       );
     } else {
@@ -86,4 +86,8 @@ class InfoWidget extends StatelessWidget {
       );
     }
   }
+}
+
+String _formatDate(DateTime date) {
+  return "${date.day}/${date.month}/${date.year}";
 }

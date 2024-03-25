@@ -2,7 +2,7 @@ import 'package:arkeofili_mobile/constant/screens_const.dart';
 import 'package:arkeofili_mobile/data/dummy_data.dart';
 import 'package:arkeofili_mobile/screen/categories_screen.dart';
 import 'package:arkeofili_mobile/screen/home_screen.dart';
-import 'package:arkeofili_mobile/screen/popular_screen.dart';
+import 'package:arkeofili_mobile/screen/latest_posts_screen.dart';
 import 'package:arkeofili_mobile/widget/backgrounda_widget.dart';
 import 'package:flutter/material.dart';
 
@@ -23,8 +23,8 @@ class _MainScreenState extends State<MainScreen> {
 
   final List<Widget> screens = [
     const HomeScreen(),
-    CategoriesScreen(),
-    PopularScreen(postModel: dummyData[1]),
+    const CategoriesScreen(),
+    const LatestPostsScreen(),
   ];
 
   @override

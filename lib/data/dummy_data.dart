@@ -3,7 +3,7 @@ import 'package:arkeofili_mobile/model/post_model.dart';
 
 final List<PostModel> dummyData = [
   PostModel(
-    title: "Antakya’da “Neşeli Ol Hayatını Yaşa” Yazılı Mozaik Bulundu",
+    title: " aaaaaaa Antakya’da “Neşeli Ol Hayatını Yaşa” Yazılı Mozaik Bulundu",
     thumbnail: "assets/images/nese.jpg",
     content:
         "Antiocheia  Antik Kenti’nin bir mahallesinde üzerinde Grekçe “Neşeli ol hayatını yaşa” yazan bir mozaik bulundu. Hatay Arkeoloji Müzesi Arkeoloğu Demet Kara, Türkiye’de bu mozaiğin eşinin olmadığını, ancak İtalya’da bir benzerine rastlandığını söyledi. Üzerinde Grekçe, ‘neşeli ol hayatını yaşa’ yazılı olduğunu belirten Kara mozaik üstünde yapılan bilimsel çalışmalar sonucu, MÖ 3. yüzyıla tarihlenen bir evin yemek salonuna ait olduğunun belirlendiğini söyledi. Kara, iskelet üstünde Doç. Dr. Hatice Pamir’in çalışmalar yaptığını söyledi: “Doç. Dr. Pamir, onu ‘iskelet mozaik’ olarak adlandırdı.” Mozaik tessera adı verilen küçük mozaik parçalarıyla yapılmış.Mozaik üzerinde üç sahne olduğu belirtiliyor, bu sahneler Roma döneminde elif sınıf için önemli olan şeyleri yansıtıyor olabilir. Arkeolog Demet Kara “Roma döneminde elit sınıfın arasında sosyal etkinlik olarak iki şey çok önemli. Biri hamam olayı, ikincisi ise akşam yemeği” diyor. Kara’ya göre mozaikte de bu etkinlikler yansıtılıyor: “Birinci sahnede bir zenci, kürekle ateş atıyor. Bu, hamamı simgeliyor. Orta sahnede ise güneş saati, ve ona koşan giysili bir genç ile arkasında çıplak kafalı bir uşağı var.”",
@@ -12,7 +12,7 @@ final List<PostModel> dummyData = [
     duration: "2 dk",
     category: Categories.archaeology,
     isTop: true,
-    releaseDate: DateTime.now(),
+    releaseDate: DateTime(2022, 9, 7),
   ),
   PostModel(
     title: "Hatay’da Bulunan Paris’in Yargısı Mozaiği",
@@ -24,7 +24,7 @@ final List<PostModel> dummyData = [
     duration: "3 dk",
     category: Categories.archaeology,
     isTop: false,
-    releaseDate: DateTime.now(),
+    releaseDate: DateTime(2010, 5, 7),
   ),
   PostModel(
     title: "Bu Bataklık Cesedinin Kafasına Sekiz Ölümcül Darbe Vurulmuş",
@@ -36,7 +36,7 @@ final List<PostModel> dummyData = [
     duration: "3 dk",
     category: Categories.anthropology,
     isTop: false,
-    releaseDate: DateTime.now(),
+    releaseDate: DateTime(2019, 9, 10),
   ),
   PostModel(
     title: "Pembe Armadillolar, Kuraklaşma Nedeniyle Çift Deri Evrimleştirmiş",
@@ -48,7 +48,7 @@ final List<PostModel> dummyData = [
     duration: "5 dk",
     category: Categories.palaeontology,
     isTop: true,
-    releaseDate: DateTime.now(),
+    releaseDate: DateTime(2018, 1, 2),
   ),
   PostModel(
     title: "Genç Büyük Maymunlar, Yaşlılarına Sataşmaktan Hoşlanıyor",
@@ -60,6 +60,6 @@ final List<PostModel> dummyData = [
     duration: "2 dk",
     category: Categories.evolution,
     isTop: true,
-    releaseDate: DateTime.now(),
+    releaseDate: DateTime(2017, 4, 5),
   )
 ];

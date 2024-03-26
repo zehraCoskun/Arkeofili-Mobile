@@ -1,6 +1,8 @@
 import 'package:arkeofili_mobile/model/enum/category_enum.dart';
+import 'package:arkeofili_mobile/model/post_model.dart';
 import 'package:arkeofili_mobile/route/route_transition.dart';
 import 'package:arkeofili_mobile/screen/categories_screen.dart';
+import 'package:arkeofili_mobile/screen/detail_screen.dart';
 import 'package:arkeofili_mobile/screen/topic_screen.dart';
 import 'package:arkeofili_mobile/screen/main_screen.dart';
 import 'package:arkeofili_mobile/screen/home_screen.dart';
@@ -14,9 +16,7 @@ class RouterGenerator {
       case "/home":
         return RouteTransition.fadeTransitionBuilder(child: const HomeScreen());
       case "/categories":
-        return RouteTransition.fadeTransitionBuilder(
-            child: const CategoriesScreen(
-        ));
+        return RouteTransition.fadeTransitionBuilder(child: const CategoriesScreen());
       case "/anthropology":
         final Categories categories = settings.arguments as Categories;
         return RouteTransition.fadeTransitionBuilder(child: TopicScreen(categories: categories));
@@ -34,6 +34,9 @@ class RouterGenerator {
       case "/palaeontology":
         final Categories categories = settings.arguments as Categories;
         return RouteTransition.fadeTransitionBuilder(child: TopicScreen(categories: categories));
+      case "/detail":
+        final PostModel postModel = settings.arguments as PostModel;
+        return RouteTransition.fadeTransitionBuilder(child: DetailScreen(postModel: postModel));
       // case "/specialFile":
       //   return RouteTransition.fadeTransitionBuilder(child: const HomeScreen());
       // case "/detail":

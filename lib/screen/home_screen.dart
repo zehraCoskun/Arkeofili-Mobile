@@ -18,31 +18,40 @@ class HomeScreen extends StatelessWidget {
     final headlinePostIndex = random.nextInt(topPostList.length);
     final selectedHeadlinePost = topPostList.removeAt(headlinePostIndex);
 
-    return Padding(
-      padding: const EdgeInsets.only(right: 8, left: 8, top: 12),
-      child: SingleChildScrollView(
-        child: Column(
-          crossAxisAlignment: CrossAxisAlignment.start,
-          children: <Widget>[
-            HeadlinePostWidget(
-              height: height,
-              width: width,
-              postModel: selectedHeadlinePost,
-            ),
-            TopPostListWidget(
-              height: height,
-              width: width,
-              postList: topPostList,
-            ),
-            ListView.builder(
-              physics: const NeverScrollableScrollPhysics(),
-              shrinkWrap: true,
-              itemCount: dummyData.length,
-              itemBuilder: (context, index) {
-                return PostCardWidget(width: width, postModel: dummyData[index], isDate: false);
-              },
-            ),
-          ],
+    return Material(
+      //inkwell'i ekleyince gelen hata yönlendirmesiyle bunu yaptım ama neden gerek olduğunu araştırmalıyım
+      child: Padding(
+        padding: const EdgeInsets.only(right: 8, left: 8, top: 12),
+        child: SingleChildScrollView(
+          child: Column(
+            crossAxisAlignment: CrossAxisAlignment.start,
+            children: <Widget>[
+              InkWell(
+                child: HeadlinePostWidget(
+                  height: height,
+                  width: width,
+                  postModel: selectedHeadlinePost,
+                ),
+                onTap: () => Navigator.of(context).pushNamed("/detail", arguments: selectedHeadlinePost),
+              ),
+              TopPostListWidget(
+                height: height,
+                width: width,
+                postList: topPostList,
+              ),
+              ListView.builder(
+                physics: const NeverScrollableScrollPhysics(),
+                shrinkWrap: true,
+                itemCount: dummyData.length,
+                itemBuilder: (context, index) {
+                  return InkWell(
+                    child: PostCardWidget(width: width, postModel: dummyData[index], isDate: false),
+                    onTap: () => Navigator.of(context).pushNamed("/detail", arguments: dummyData[index]),
+                  );
+                },
+              ),
+            ],
+          ),
         ),
       ),
     );

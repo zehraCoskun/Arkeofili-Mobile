@@ -25,10 +25,13 @@ class TopPostListWidget extends StatelessWidget {
           shrinkWrap: false,
           itemCount: postList.length,
           itemBuilder: (context, index) {
-            return TopPostCardWidget(
-              height: height,
-              width: width,
-              postModel: postList[index],
+            return InkWell(
+              child: TopPostCardWidget(
+                height: height,
+                width: width,
+                postModel: postList[index],
+              ),
+              onTap: () => Navigator.of(context).pushNamed("/detail", arguments: postList[index]),
             );
           },
         ),

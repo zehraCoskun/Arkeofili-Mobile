@@ -12,7 +12,7 @@ class MainDrawer extends StatelessWidget {
     return const Drawer(
       child: Column(
         children: [
-           DrawerTitle(),
+          DrawerTitle(),
           DrawerBody(drawerItems: Categories.values),
           Divider(thickness: 1.0),
           DrawerFooter(),

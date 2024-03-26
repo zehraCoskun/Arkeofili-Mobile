@@ -24,7 +24,12 @@ class BackgroundWidget extends StatelessWidget {
                 height: kToolbarHeight * 9 / 10,
               ),
             )
-          : AppBar(title: Text(category!)),
+          : AppBar(title: Text(category!), actions: [
+              IconButton(
+                onPressed: () => Navigator.of(context).pushNamed("/main"),
+                icon: const Icon(Icons.home),
+              )
+            ]),
       drawer: const MainDrawer(),
       body: body,
       bottomNavigationBar: bottomNavigationBar,

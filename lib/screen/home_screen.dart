@@ -44,10 +44,7 @@ class HomeScreen extends StatelessWidget {
                 shrinkWrap: true,
                 itemCount: dummyData.length,
                 itemBuilder: (context, index) {
-                  return InkWell(
-                    child: PostCardWidget(width: width, postModel: dummyData[index], isDate: false),
-                    onTap: () => Navigator.of(context).pushNamed("/detail", arguments: dummyData[index]),
-                  );
+                  return PostCardWidget(width: width, postModel: dummyData[index], isDate: false);
                 },
               ),
             ],

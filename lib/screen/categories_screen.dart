@@ -9,7 +9,6 @@ class CategoriesScreen extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     final double width = MediaQuery.of(context).size.width;
-   
 
     return ListView(
       children: categorizedPosts.entries.map((entry) {

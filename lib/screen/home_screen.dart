@@ -14,12 +14,13 @@ class HomeScreen extends StatelessWidget {
     final double height = MediaQuery.of(context).size.height;
     final double width = MediaQuery.of(context).size.width;
     final List<PostModel> topPostList = dummyData.where((element) => element.isTop).toList();
+    // isTop == true olanlardan birisini random başlık yapıyor
     var random = Random();
     final headlinePostIndex = random.nextInt(topPostList.length);
     final selectedHeadlinePost = topPostList.removeAt(headlinePostIndex);
 
+    //inkwell'i ekleyince gelen hata yönlendirmesiyle Material yaptım ama neden gerek olduğunu araştırmalıyım
     return Material(
-      //inkwell'i ekleyince gelen hata yönlendirmesiyle bunu yaptım ama neden gerek olduğunu araştırmalıyım
       child: Padding(
         padding: const EdgeInsets.only(right: 8, left: 8, top: 12),
         child: SingleChildScrollView(

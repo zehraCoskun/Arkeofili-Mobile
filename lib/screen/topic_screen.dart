@@ -5,6 +5,8 @@ import 'package:arkeofili_mobile/widget/backgrounda_widget.dart';
 import 'package:arkeofili_mobile/widget/post_card_widget.dart';
 import 'package:flutter/material.dart';
 
+// drawer üzerinden tıklanan kategorilerin sayfası
+
 class TopicScreen extends StatelessWidget {
   const TopicScreen({super.key, required this.categories});
   final Categories categories;

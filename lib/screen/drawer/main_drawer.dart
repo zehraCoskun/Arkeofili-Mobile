@@ -14,7 +14,7 @@ class MainDrawer extends StatelessWidget {
         children: [
           DrawerTitle(),
           DrawerBody(drawerItems: Categories.values),
-          Divider(thickness: 1.0),
+          Divider(thickness: 3.0),
           DrawerFooter(),
         ],
       ),

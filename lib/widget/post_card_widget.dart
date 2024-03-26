@@ -71,6 +71,7 @@ class PostCardWidget extends StatelessWidget {
   }
 }
 
+// tarih ya da okuma süresi 
 class InfoWidget extends StatelessWidget {
   const InfoWidget({super.key, required this.isDate, required this.postModel});
   final bool isDate;

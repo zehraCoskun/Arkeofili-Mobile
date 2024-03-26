@@ -8,6 +8,8 @@ class LatestPostsScreen extends StatelessWidget {
   const LatestPostsScreen({super.key});
   @override
   Widget build(BuildContext context) {
+
+    //yayınlanma tarihlerine göre sıralayıp en yeni 5 tanesini listede tutuyor
     dummyData.sort((a, b) => b.releaseDate.compareTo(a.releaseDate));
     List<PostModel> latestPosts = dummyData.take(5).toList();
 

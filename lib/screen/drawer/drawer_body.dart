@@ -29,3 +29,4 @@ class DrawerBody extends StatelessWidget {
     );
   }
 }
+// TODO : sadece kategori seçenekleri aktif, diğer sayfalar eklenecek

@@ -18,6 +18,7 @@ class CategoriesScreen extends StatelessWidget {
             CategoryCard(categoryTitle: getCategoryString(entry.key)),
             ListView.builder(
               shrinkWrap: true,
+              // listView içinde tekrardan ekran kaydı olmaması için eklendi
               physics: const NeverScrollableScrollPhysics(),
               itemCount: entry.value.length,
               itemBuilder: (context, index) {

@@ -4,8 +4,7 @@ enum SocialMedia {
   facebook,
   twitter,
   instagram,
-  youtube,
-  feed;
+  youtube;
 
   String toUrl() {
     switch (this) {
@@ -17,8 +16,6 @@ enum SocialMedia {
         return instagramURL;
       case SocialMedia.youtube:
         return youtubeURL;
-      case SocialMedia.feed:
-        return feedURL;
     }
   }
 
@@ -32,8 +29,6 @@ enum SocialMedia {
         return instagramIcon;
       case SocialMedia.youtube:
         return youtubeIcon;
-      case SocialMedia.feed:
-        return facebookIcon;
     }
   }
 }

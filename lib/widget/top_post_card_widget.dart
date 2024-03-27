@@ -16,38 +16,41 @@ class TopPostCardWidget extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    return Column(
-      crossAxisAlignment: CrossAxisAlignment.start,
-      mainAxisAlignment: MainAxisAlignment.start,
-      children: [
-        Image.asset(
-          postModel.thumbnail,
-          width: height * 1 / 5,
-          fit: BoxFit.fill,
-        ),
-        Padding(
-          padding: const EdgeInsets.symmetric(vertical: 8.0),
-          child: SizedBox(
-            width: width * 9 / 20,
-            child: Text(
-              postModel.title,
-              style: Theme.of(context).textTheme.titleMedium,
-              overflow: TextOverflow.fade,
-              maxLines: 3,
+    return Padding(
+      padding: const EdgeInsets.only(right: 8.0),
+      child: Column(
+        crossAxisAlignment: CrossAxisAlignment.start,
+        mainAxisAlignment: MainAxisAlignment.start,
+        children: [
+          Image.asset(
+            postModel.thumbnail,
+            width: height * 1 / 5,
+            fit: BoxFit.fitHeight,
+          ),
+          Padding(
+            padding: const EdgeInsets.symmetric(vertical: 8.0),
+            child: SizedBox(
+              width: width * 9 / 20,
+              child: Text(
+                postModel.title,
+                style: Theme.of(context).textTheme.titleMedium,
+                overflow: TextOverflow.fade,
+                maxLines: 3,
+              ),
             ),
           ),
-        ),
-        Row(
-          mainAxisAlignment: MainAxisAlignment.start,
-          children: [
-            Text(getCategoryString(postModel.category), style: Theme.of(context).textTheme.labelMedium),
-            Padding(
-              padding: const EdgeInsets.symmetric(horizontal: 8.0),
-              child: Text("· ${postModel.duration}", style: Theme.of(context).textTheme.labelSmall),
-            )
-          ],
-        )
-      ],
+          Row(
+            mainAxisAlignment: MainAxisAlignment.start,
+            children: [
+              Text(getCategoryString(postModel.category), style: Theme.of(context).textTheme.labelMedium),
+              Padding(
+                padding: const EdgeInsets.symmetric(horizontal: 8.0),
+                child: Text("· ${postModel.duration}", style: Theme.of(context).textTheme.labelSmall),
+              )
+            ],
+          )
+        ],
+      ),
     );
   }
 }

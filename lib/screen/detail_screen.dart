@@ -1,5 +1,6 @@
 import 'package:arkeofili_mobile/model/enum/category_enum.dart';
 import 'package:arkeofili_mobile/model/post_model.dart';
+import 'package:arkeofili_mobile/theme/ios_theme.dart';
 import 'package:arkeofili_mobile/widget/backgrounda_widget.dart';
 import 'package:flutter/material.dart';
 
@@ -20,7 +21,14 @@ class DetailScreen extends StatelessWidget {
               child: Row(
                 mainAxisAlignment: MainAxisAlignment.start,
                 children: [
-                  Text(getCategoryString(postModel.category), style: Theme.of(context).textTheme.labelLarge),
+                  Container(
+                    padding: const EdgeInsets.symmetric(horizontal: 8),
+                    color: ArkeofiliColors.darkGreen,
+                    child: Text(
+                      getCategoryString(postModel.category),
+                      style: Theme.of(context).textTheme.labelLarge,
+                    ),
+                  ),
                   Padding(
                     padding: const EdgeInsets.symmetric(horizontal: 8.0),
                     child: Text("· ${postModel.duration} okuma süresi", style: Theme.of(context).textTheme.labelSmall),

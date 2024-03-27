@@ -17,34 +17,34 @@ class RouterGenerator {
         return RouteTransition.fadeTransitionBuilder(child: const HomeScreen());
       case "/categories":
         return RouteTransition.fadeTransitionBuilder(child: const CategoriesScreen());
-      case "/anthropology":
-        final Categories categories = settings.arguments as Categories;
-        return RouteTransition.fadeTransitionBuilder(child: TopicScreen(categories: categories));
+        
       case "/archaeology":
         final Categories categories = settings.arguments as Categories;
         return RouteTransition.fadeTransitionBuilder(child: TopicScreen(categories: categories));
-      case "/culturalHeritage":
+      case "/anthropology":
+        final Categories categories = settings.arguments as Categories;
+        return RouteTransition.fadeTransitionBuilder(child: TopicScreen(categories: categories));
+      case "/palaeontology":
         final Categories categories = settings.arguments as Categories;
         return RouteTransition.fadeTransitionBuilder(child: TopicScreen(categories: categories));
       case "/evolution":
         final Categories categories = settings.arguments as Categories;
         return RouteTransition.fadeTransitionBuilder(child: TopicScreen(categories: categories));
-      // case "/list":
-      //   return RouteTransition.fadeTransitionBuilder(child: const HomeScreen());
-      case "/palaeontology":
+      case "/culturalHeritage":
         final Categories categories = settings.arguments as Categories;
         return RouteTransition.fadeTransitionBuilder(child: TopicScreen(categories: categories));
+      case "/specialFile":
+        return RouteTransition.fadeTransitionBuilder(child: const MainScreen());
+      case "/list":
+        final Categories categories = settings.arguments as Categories;
+        return RouteTransition.fadeTransitionBuilder(child: TopicScreen(categories: categories));
+      
       case "/detail":
         final PostModel postModel = settings.arguments as PostModel;
         return RouteTransition.fadeTransitionBuilder(child: DetailScreen(postModel: postModel));
-      // case "/specialFile":
-      //   return RouteTransition.fadeTransitionBuilder(child: const HomeScreen());
-      // case "/detail":
-      //   final PostModel post = settings.arguments as PostModel;
-      //   return RouteTransition.fadeTransitionBuilder(child: GlobalDetailScreen(post: post));
 
       default:
-        return RouteTransition.fadeTransitionBuilder(child: const HomeScreen());
+        return RouteTransition.fadeTransitionBuilder(child: const MainScreen());
     }
   }
 }

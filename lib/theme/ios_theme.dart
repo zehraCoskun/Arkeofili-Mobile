@@ -65,7 +65,7 @@ final iosTheme = ThemeData(
     bodyMedium: TextStyle(fontSize: 14, fontWeight: FontWeight.w400, color: ArkeofiliColors.white), // ok
     bodySmall: TextStyle(fontSize: 12, fontWeight: FontWeight.w400, color: ArkeofiliColors.lightBlack),
 //en küçük yazılar için
-    labelLarge: TextStyle(fontSize: 14, fontWeight: FontWeight.w500, color: ArkeofiliColors.white, backgroundColor: ArkeofiliColors.darkGreen),
+    labelLarge: TextStyle(fontSize: 14, fontWeight: FontWeight.w500, color: ArkeofiliColors.white),
     labelMedium: TextStyle(fontSize: 14, fontWeight: FontWeight.w500, color: ArkeofiliColors.mainColor), // ok
     labelSmall: TextStyle(fontSize: 14, fontWeight: FontWeight.w500, color: ArkeofiliColors.grey),
   ),

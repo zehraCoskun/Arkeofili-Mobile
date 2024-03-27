@@ -12,7 +12,7 @@ final List<PostModel> dummyData = [
     duration: "2 dk",
     category: Categories.archaeology,
     isTop: true,
-    releaseDate: DateTime(2022, 9, 7),
+    releaseDate: DateTime(2024, 3, 7),
   ),
   PostModel(
     title: "Hatay’da Bulunan Paris’in Yargısı Mozaiği",
@@ -24,7 +24,7 @@ final List<PostModel> dummyData = [
     duration: "3 dk",
     category: Categories.archaeology,
     isTop: true,
-    releaseDate: DateTime(2010, 5, 7),
+    releaseDate: DateTime(2024, 3, 7),
   ),
   PostModel(
     title: "Bu Bataklık Cesedinin Kafasına Sekiz Ölümcül Darbe Vurulmuş",
@@ -36,7 +36,7 @@ final List<PostModel> dummyData = [
     duration: "3 dk",
     category: Categories.anthropology,
     isTop: false,
-    releaseDate: DateTime(2019, 9, 10),
+    releaseDate: DateTime(2024, 3, 10),
   ),
   PostModel(
     title: "Pembe Armadillolar, Kuraklaşma Nedeniyle Çift Deri Evrimleştirmiş",
@@ -48,7 +48,7 @@ final List<PostModel> dummyData = [
     duration: "5 dk",
     category: Categories.palaeontology,
     isTop: true,
-    releaseDate: DateTime(2018, 1, 2),
+    releaseDate: DateTime(2024, 3, 2),
   ),
   PostModel(
     title: "Genç Büyük Maymunlar, Yaşlılarına Sataşmaktan Hoşlanıyor",
@@ -60,6 +60,6 @@ final List<PostModel> dummyData = [
     duration: "2 dk",
     category: Categories.evolution,
     isTop: true,
-    releaseDate: DateTime(2017, 4, 5),
+    releaseDate: DateTime(2024, 3, 5),
   )
 ];

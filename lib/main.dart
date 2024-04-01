@@ -6,8 +6,9 @@ import 'package:flutter/material.dart';
 void main() {
   // postları uygulama ilk çalıştığında bir kez kagetorilerine göre listelere ayırıyor
   initializeCategories();
-  
+
   runApp(MaterialApp(
+    debugShowCheckedModeBanner: false,
     theme: ThemeSettings.lightTheme(),
     themeMode: ThemeMode.system,
     initialRoute: "/main",
